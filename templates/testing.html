@@ -5,9 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing</title>
+    <!-- MINIFIED CSS -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.min.css')}}">
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <button class="btn">CLick me</button>
+    <nav>
+        <div class="container">
+            <a href="#" class="nav__logo"><h3>DUESTAKE</h3></a>
+
+            <ul id="nav__items">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">GET A LOAN</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <button class="login__btn" id="login__btn">Login</button>
+            <button class="open__btn" id="open__nav-btn"><i class='bx bx-menu'></i></button>
+            <button class="close__btn" id="close__nav-btn"><i class='bx bx-x'></i></button>
+
+        </div>
+    </nav>
+    <!--============================= END OF NAV =============================-->
+
+    <!--============================= JAVASCRIPT =============================-->
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
 </body>
 </html>

@@ -1,4 +1,16 @@
-container {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    color: $color-primary-text;
+    background: $color-very-light-green;
+    user-select: none;
+}
+
+.container {
     width: $container-lg;
     margin: 0 auto;
 }
@@ -21,11 +33,39 @@ section {
 
     & > p {
         text-align: center;
-        width: 45%;
+        width: 42%;
         margin: 0.6rem auto 2.5rem;
     }
 }
 
-.btn {
-    @include button;
+.login__btn {
+    @include button();
+}
+
+.btn-primary {
+    @include button($color-primary-white, $color-primary-text)
+}
+
+/*============================ MEDIA QUERIES (TABLET) =============================*/
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: $container-md;
+    } 
+    
+    section {
+        & > p {
+            width: 55%;
+        }
+    }
+}
+
+/*============================ MEDIA QUERIES (MOBILE) =============================*/
+
+@media screen and (max-width: 600px) {
+    section {
+        & > p {
+            width: $container-md;
+        }
+    }
 }
