@@ -34,6 +34,7 @@
     background-color: var(--color-very-light-green);
     width: 100vw;
     height: 100vh;
+    display: grid;
 }
 
 .hero-container h1 {
